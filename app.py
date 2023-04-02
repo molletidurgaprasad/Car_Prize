@@ -67,7 +67,7 @@ if(st.button('predict')):
     values=[final_arr]
     pred=reg.predict(values)
     if(pred>5000):
-        st.success(math.floor(pred))
+        st.success(math.int(pred))
     else:
         st.error('Give Correct Values')
  
