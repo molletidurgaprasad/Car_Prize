@@ -66,7 +66,9 @@ if(st.button('predict')):
     final_arr=[year,mileage]+test_state+test_make+test_model
     values=[final_arr]
     pred=reg.predict(values)
-    if(pred>5000):
+    if(pred>80000):
+        st.success(80000)
+    elif(pred>5000):
         st.success(math.floor(pred))
     else:
         st.error('Give Correct Values')
